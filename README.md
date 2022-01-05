@@ -5,9 +5,13 @@ script ini berfungsi untuk menambahkan anggota grup lain ke grup Anda secara oto
 # Cara penggunaan
 
 - setup file konfigurasi (nomor hp, link grup Anda)
+    
 ```python main.py --setup```
+
 - jalankan script
+    
 ```python main.py --run```
+
 - Anda akan diminta memasukan kode yang dikirim oleh Telegram (jika sebelumnya belum pernah)
 - selanjutnya masukan link grup Telegram yang akan undang anggotanya
 - enjoy :)
