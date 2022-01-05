@@ -25,6 +25,17 @@ def delay():
         print(f'\r{Fore.GREEN}[*] {Fore.WHITE}mohon tunggu selama {i} detik...', end='')
         sleep(1)
 
+def full_name(user):
+    first_name = user.first_name
+    last_name = user.last_name
+
+    if first_name is None:
+        first_name = ''
+    if last_name is None:
+        last_name = ''
+
+    return first_name + ' ' + last_name
+
 # main program
 def main():
     if not configfile in listdir():
@@ -73,7 +84,7 @@ def main():
                 to,
                 [user_to_add]
             ))
-            print(f'\r{Fore.GREEN}[+] {Fore.WHITE}Menambahkan {Fore.GREEN}{user.username}')
+            print(f'\r{Fore.GREEN}[+] {Fore.WHITE}Menambahkan {Fore.GREEN}{user.username} ({full_name(user)})')
             success += 1
             delay()
         except rpcerrorlist.PeerFloodError:
@@ -91,6 +102,7 @@ def main():
             print(f'\r{Fore.RED}{e}')
 
         print(f'\r{Fore.YELLOW}[*] {Fore.GREEN}berhasil: {success} {Fore.RED}gagal: {failed}', end='')
+        sleep(1)
 
 
 def setup():
