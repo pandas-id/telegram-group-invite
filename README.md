@@ -4,6 +4,10 @@ script ini berfungsi untuk menambahkan anggota grup lain ke grup Anda secara oto
 
 # Cara penggunaan
 
+- install library yang dibutuhkan
+
+```pip install requirements.txt```
+
 - setup file konfigurasi (nomor hp, link grup Anda)
     
 ```python main.py --setup```
